@@ -43,4 +43,4 @@ def install_csrf_token(session, response):
     session['csrf_token'] = csrf_token
     response.cookies['csrf_token'] = csrf_token
     response.cookies['csrf_token']['max-age'] = 600
-    # response.cookies['csrf_token']['Same-Site'] = 'Strict'  # TODO
+    response.cookies['csrf_token']['samesite'] = 'strict'
